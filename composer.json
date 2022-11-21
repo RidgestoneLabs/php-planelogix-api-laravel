@@ -1,0 +1,56 @@
+{
+  "name": "ridgestonelabs/planelogix-api-php-laravel",
+  "homepage": "https://github.com/RidgestoneLabs/planelogix-api-php-laravel",
+  "description": "A Laravel 9 service provider for including the PLANELOGIX API v2 Client.",
+  "keywords": [
+    "laravel",
+    "laravel 9",
+    "planelogix",
+    "sdk"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andrew Kolstad",
+      "email": "hello@andrewkolstad.com",
+      "homepage": "https://github.com/DrewKolstad"
+    }
+  ],
+  "require": {
+    "php": "^8.0.2",
+    "illuminate/support": "^9.0",
+    "ridgestonelabs/planelogix-api-php": "dev-main"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0",
+    "vlucas/phpdotenv": "^5.0",
+    "laravel/framework": "^9.0"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/RidgestoneLabs/planelogix-api-php.git"
+    }
+  ],
+  "suggest": {
+    "laravel/framework": "To test the Laravel bindings"
+  },
+  "autoload": {
+    "psr-4": {
+      "PlaneLogixAPI\\Laravel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PlaneLogixAPI\\Laravel\\Test\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PlaneLogixAPI\\Laravel\\PlaneLogixAPIServiceProvider"
+      ]
+    }
+  }
+}
