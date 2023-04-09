@@ -18,14 +18,14 @@
     }
   ],
   "require": {
-    "php": "^8.0.2",
-    "illuminate/support": "^9.0",
+    "php": "^8.2|^8.1|^8.0",
+    "illuminate/support": "^10.0|^9.0",
     "ridgestonelabs/planelogix-api-php": "dev-main"
   },
   "require-dev": {
-    "phpunit/phpunit": "^9.0",
+    "phpunit/phpunit": "^10.0|^9.0",
     "vlucas/phpdotenv": "^5.0",
-    "laravel/framework": "^9.0"
+    "laravel/framework": "^10.0|^9.0"
   },
   "repositories": [
     {
@@ -51,6 +51,11 @@
       "providers": [
         "PlaneLogixAPI\\Laravel\\PlaneLogixAPIServiceProvider"
       ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": true
     }
   }
 }
